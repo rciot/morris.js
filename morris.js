@@ -1289,6 +1289,7 @@ Licensed under the BSD-2-Clause License.
 
   Morris.labelSeries = function(dmin, dmax, pxwidth, specName, xLabelFormat) {
     var d, d0, ddensity, name, ret, s, spec, t, _i, _len, _ref;
+    if (isNaN(pxwidth)) pxwidth = 400;
     ddensity = 200 * (dmax - dmin) / pxwidth;
     d0 = new Date(dmin);
     spec = Morris.LABEL_SPECS[specName];
